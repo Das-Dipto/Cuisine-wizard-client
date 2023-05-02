@@ -10,6 +10,8 @@ import {
 import Root from './Component/PublicRoute/Root.jsx';
 import Home from './Component/PublicRoute/Home.jsx';
 import Login from './Component/PublicRoute/Login.jsx';
+import Register from './Component/PublicRoute/Register.jsx';
+import MailLogin from './Component/PublicRoute/MailLogin.jsx';
 
 
 const router = createBrowserRouter([
@@ -24,7 +26,15 @@ const router = createBrowserRouter([
       {
         path:'login',
         element:<Login></Login>
-      }
+      },
+      {
+        path:'register',
+        element:<Register></Register>
+      },
+      {
+        path:'signInWithMail',
+        element:<MailLogin></MailLogin>
+      },
     ],
   },
 ]);

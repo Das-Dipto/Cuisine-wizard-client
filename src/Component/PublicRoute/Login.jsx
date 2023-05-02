@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <>
-      <div className="login-container d-flex align-items-center w-75 mx-auto">
-        <div style={{width:600}}>
+      <div className="login-container d-flex flex-column flex-md-row align-items-center w-75 mx-auto">
+        <div style={{maxWidth:600}}>
             <Lottie animationData={Anim} />
         </div>
         <div className="login-item">
@@ -22,10 +22,10 @@ const Login = () => {
                  <FaGithub style={{fontSize:30}} className='me-2'/>
                   Sign in with Github
             </div>
-            <div className="Email-login d-flex w-100 justify-content-center align-items-center login-bar p-4">
+            <Link to="/signInWithMail" className="Email-login text-dark d-flex w-100 justify-content-center align-items-center login-bar p-4 text-decoration-none">
                  <AiOutlineMail style={{fontSize:30}} className='me-2'/>
                  Sign in with Email
-            </div>
+            </Link>
             <Link to="/register" className='text-primary'>New here? Please register</Link>
         </div>
       </div>
