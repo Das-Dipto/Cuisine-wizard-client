@@ -10,6 +10,10 @@ font-family: 'Parisienne', cursive; */
 }
 
 /* Below Navber component design */
+.logo-text{
+  font-family: 'Parisienne', cursive;
+}
+
 .links{
   text-decoration: none;
 }
@@ -65,6 +69,39 @@ font-family: 'Parisienne', cursive; */
 }
 
 /* Above Login component design */
+.details-container{
+  width: 90%;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-container img{
+  max-width: 580px;
+}
+
+
+.chef-card{
+  border: 1px solid red;
+  width: 40%;
+}
+
+@media screen and (max-width:900px){
+  .details-container{
+    flex-wrap: wrap;
+  }
+
+  .details-container img{
+     width: 100%;
+  }
+
+} 
+
+@media screen and (max-width:750px){
+  .chef-card{
+    width: 100%;
+  }
+}
 
 @media screen and (max-width:550px){
     .nav-item{

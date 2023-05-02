@@ -13,6 +13,7 @@ import Login from './Component/PublicRoute/Login.jsx';
 import Register from './Component/PublicRoute/Register.jsx';
 import MailLogin from './Component/PublicRoute/MailLogin.jsx';
 import AuthProvider from '../src/Component/ContextProvider/AuthProvider.jsx'
+import ChefReceipes from './Component/ProtectedRoute/ChefReceipes.jsx';
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root></Root>,
     children: [
+      {
+        path:'/',
+        element:<Home></Home>
+      },
       {
         path:'home',
         element:<Home></Home>
@@ -35,6 +40,10 @@ const router = createBrowserRouter([
       {
         path:'signInWithMail',
         element:<MailLogin></MailLogin>
+      },
+      {
+        path:'chefreceipes/:id',
+        element:<ChefReceipes></ChefReceipes>
       },
     ],
   },
