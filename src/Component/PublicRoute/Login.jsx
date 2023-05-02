@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../ContextProvider/AuthProvider';
 
 const Login = () => {
-  const {googleSignIn} = useContext(AuthContext)
+  const {googleSignIn ,githubSignIn} = useContext(AuthContext)
+
   const googleLogin = () =>{
       googleSignIn()
       .then((result)=>{
@@ -19,6 +20,17 @@ const Login = () => {
         console.log(error.message);
       })
   }
+
+  const githubLogin = () =>{
+    githubSignIn()
+    .then((result)=>{
+       const loggedInUser =result.user;
+       console.log(loggedInUser);
+    })
+    .catch((error)=>{
+      console.log(error.message);
+    })
+}
   return (
     <>
       <div className="login-container d-flex flex-column flex-md-row align-items-center w-75 mx-auto">
@@ -30,7 +42,7 @@ const Login = () => {
                  <FcGoogle style={{fontSize:30}} className='me-2'/>
                   Sign in with Google
             </div>
-            <div className="Github-login d-flex w-100 justify-content-center align-items-center login-bar p-4 my-3">
+            <div onClick={githubLogin} className="Github-login d-flex w-100 justify-content-center align-items-center login-bar p-4 my-3">
                  <FaGithub style={{fontSize:30}} className='me-2'/>
                   Sign in with Github
             </div>

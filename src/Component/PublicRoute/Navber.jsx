@@ -25,16 +25,17 @@ const Navber = () => {
           <Link to='/home' className='text-decoration-none text-light mx-4'>Home</Link>
           <Link to='/blog' className='text-decoration-none text-light mx-4'>Blog</Link>
           {
-            user ? 
-            <Link to=''>
-                  <img src={user.photoURL} alt={user.displayName} />
+            user ? <>
+              {(user.photoURL) ?  <img title={user.displayName || user.reloadUserInfo.screenName} src={user.photoURL} alt={user.displayName} /> : 
+                          <small title={user.displayName} className='text-light text-decoration-none'>{user.email}</small>}
+            <Link to=''>  
                   <Button onClick={signingOut} variant="outline-info" className='ms-4'>Logout</Button>
               </Link>
+              </>
              : 
              <Link to='/login'>
                   <Button variant="outline-info" className='ms-4'>Login</Button>
              </Link>
-          
           }
          
       </div>

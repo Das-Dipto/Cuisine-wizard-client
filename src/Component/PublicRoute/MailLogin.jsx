@@ -1,13 +1,30 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { AuthContext } from '../ContextProvider/AuthProvider';
 
 const MailLogin = () => {
-  
+  const [fieldErrorMessage, setFieldErrorMessage] = useState('');
+  const { mailSignIn} = useContext(AuthContext);
   const handleLogin = (event) =>{
      event.preventDefault();
      const email = event.target.email.value;
      const password = event.target.password.value;
+
+     if(email,password){
+        mailSignIn(email, password)
+        .then((result)=>{
+           const loggeInUser = result.user;
+           console.log(loggeInUser);
+           setFieldErrorMessage('');
+        })
+        .catch((error)=>{
+           setFieldErrorMessage('wrong email or password! Try again');
+           console.log(error.message);
+        })
+       
+    }
+     
   }
   return (
     <>
@@ -25,6 +42,7 @@ const MailLogin = () => {
             <Button variant="primary" type="submit">
                 Submit
             </Button>
+            <h4 className='text-danger'>{fieldErrorMessage}</h4>
         </Form>
     </>
   )

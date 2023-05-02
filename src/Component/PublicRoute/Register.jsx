@@ -1,21 +1,62 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { AuthContext } from '../ContextProvider/AuthProvider';
 
-const handleRegisterSubmit = (event) =>{
-    event.preventDefault();
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-}
+
 
 const Register = () => {
+    const { user, createUser, updateUserData} = useContext(AuthContext);
+    const [passwordError, setPasswordError] = useState('');
+    const [inputFieldError, setInputFieldError] = useState('');
+    const handleRegisterSubmit = (event) =>{
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        const photoURL = event.target.url.value;
+    
+        if(password.length < 6){
+            setPasswordError("Password cannot be less than 6 character")
+            return;
+        }
+
+        else{
+            setPasswordError('');
+        }
+
+        if(email, password){
+            createUser(email, password)
+            .then((result)=>{
+                const registeredUser = result.user;
+                console.log(registeredUser);
+                
+                updateUserData(result.user, name, photoURL)
+                .then(()=>{
+                    console.log('user name updated');
+                })
+                .catch((error)=>{
+                    console.log(error.message);
+                })
+            })
+            .catch((error)=>{
+                console.log(error.message);
+            })
+            setInputFieldError('');
+        }
+
+        else{
+            setInputFieldError("Email & Passport field should not be empty. ")
+        }
+
+    }
+
   return (
     <>
        <Form onSubmit={handleRegisterSubmit} className='w-25 mx-auto my-5'>
             <Form.Group className="mb-3" >
                 <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter Name" name='name' required/>
+                <Form.Control type="text" placeholder="Enter Name" name='name' />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -29,16 +70,18 @@ const Register = () => {
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" name='password' required/>
+                <p className='text-danger'>{passwordError}</p>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-3" >
                 <Form.Label>Photo</Form.Label>
-                <Form.Control type="text" placeholder="Photo URL" name='photo' required/>
+                <Form.Control type="text" placeholder="Photo URL" name='url' />
             </Form.Group>
             
             <Button variant="primary" type="submit">
                 Submit
             </Button>
+            <h4 className='text-danger'>{inputFieldError}</h4>
     </Form>
     </>
   )
