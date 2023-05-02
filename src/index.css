@@ -29,6 +29,10 @@ font-family: 'Parisienne', cursive; */
 .links{
     font-size:1.3rem
 }
+
+.nav-container img{
+    width: 10% !important;
+}
 /* Above Navber component design */
 
 /* Below Home component design */

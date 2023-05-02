@@ -12,6 +12,7 @@ import Home from './Component/PublicRoute/Home.jsx';
 import Login from './Component/PublicRoute/Login.jsx';
 import Register from './Component/PublicRoute/Register.jsx';
 import MailLogin from './Component/PublicRoute/MailLogin.jsx';
+import AuthProvider from '../src/Component/ContextProvider/AuthProvider.jsx'
 
 
 const router = createBrowserRouter([
@@ -41,5 +42,7 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
+  <AuthProvider>
+    <RouterProvider router={router} />
+  </AuthProvider>
 )
