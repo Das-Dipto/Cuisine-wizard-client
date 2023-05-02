@@ -1,5 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Parisienne&display=swap');
+
+/* font-family: 'Pacifico', cursive;
+font-family: 'Parisienne', cursive; */
+
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
 }
+
+/* Below Navber component design */
+.links{
+  text-decoration: none;
+}
+
+.nav-container{
+  background-color: black;
+}
+
+ .nav-item{
+    width: 90%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links{
+    font-size:1.3rem
+}
+/* Above Navber component design */
+
+/* Below Home component design */
+.banner img{
+    object-fit: cover;
+    height: 60vh;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* Above Home component design */
+
+
+/* Below Login component design */
+.login-bar{
+  border: 1px solid black;
+  font-size:1.3rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.login-bar:hover{
+  border: 1px solid rgb(8, 164, 255);
+  color: white;
+  background-color: rgb(8, 164, 255);
+}
+
+/* Above Login component design */
+
+@media screen and (max-width:550px){
+    .nav-item{
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width:250px){
+    .nav-item{align-items:start;}
+    
+    .links{
+       display: flex;
+       flex-direction: column;
+    }
+}
+
+
