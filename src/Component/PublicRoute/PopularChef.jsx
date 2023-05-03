@@ -12,7 +12,7 @@ const PopularChef = () => {
   const [spinnerBool, setSpinnerBool] = useState(true);
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/chefinfo`)
+    fetch(`https://server-a10-ddipto396-gmailcom.vercel.app/chefinfo`)
     .then(res=>res.json())
     .then((data)=>{
       setChefCard(data)

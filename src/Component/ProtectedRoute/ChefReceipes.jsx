@@ -18,7 +18,7 @@ const ChefReceipes = () => {
   const [bool, setBool] = useState(false);
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/chefinfo`)
+    fetch(`https://server-a10-ddipto396-gmailcom.vercel.app/chefinfo`)
     .then(res=>res.json())
     .then((data)=>{
       setDetails(data)
@@ -32,7 +32,7 @@ const ChefReceipes = () => {
   const [receipeBool, setRecipeBool] = useState(false);
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/receipeInfo`)
+    fetch(`https://server-a10-ddipto396-gmailcom.vercel.app/receipeInfo`)
     .then(res=>res.json())
     .then((data)=>{
       setRecipeDetails(data);

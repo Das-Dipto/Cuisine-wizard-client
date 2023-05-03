@@ -9,7 +9,6 @@ const Home = () => {
      <>
       <Banner></Banner>
       <PopularChef></PopularChef>
-      <Footer></Footer>
      </>
   )
 }
