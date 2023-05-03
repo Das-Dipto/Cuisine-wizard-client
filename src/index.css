@@ -115,6 +115,15 @@ font-family: 'Parisienne', cursive; */
 .error-code{
   font-size: 5rem;
   font-family: 'Pacifico', cursive;
+}
+
+.footer-font{
+  color: #FF6000;
+}
+
+.footer-container a, .footer-container p{
+  color: white !important;
+  text-decoration: none;
 
 }
 
