@@ -1,7 +1,7 @@
 import React from 'react'
 import Banner from './Banner';
 import PopularChef from './PopularChef';
-import Footer from './Footer';
+import Newsletter from './Newsletter';
 
 
 const Home = () => {
@@ -9,6 +9,7 @@ const Home = () => {
      <>
       <Banner></Banner>
       <PopularChef></PopularChef>
+      <Newsletter></Newsletter>
      </>
   )
 }

@@ -3,6 +3,30 @@
 /* font-family: 'Pacifico', cursive;
 font-family: 'Parisienne', cursive; */
 
+/* h1{
+  background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+  background-size: 400%;
+  font-size: 30px;
+  font-family: sans-serif;
+  letter-spacing: 10px;
+  font-weight: 600;
+  word-spacing: 5px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+      background-position: 0%;
+  }
+
+  100%{
+      background-position: 400%;
+  }
+} */
+
 *{
   margin:0;
   padding:0;
@@ -10,8 +34,26 @@ font-family: 'Parisienne', cursive; */
 }
 
 /* Below Navber component design */
-.logo-text{
-  font-family: 'Parisienne', cursive;
+.logo-text, .chef-container h1{ 
+  background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+  background-size: 400%;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+      background-position: 0%;
+  }
+
+  100%{
+      background-position: 400%;
+  }
 }
 
 .links{
@@ -42,7 +84,7 @@ font-family: 'Parisienne', cursive; */
 
 /* Below Home component design */
 
-.banner-special-text{
+.banner-special-text, .newsletter-special-text{
   color:aqua;
 }
 
@@ -87,7 +129,6 @@ font-family: 'Parisienne', cursive; */
   max-width: 580px;
 }
 
-
 .chef-card{
   /* border: 1px solid red; */
   width: 40%;
@@ -124,7 +165,29 @@ font-family: 'Parisienne', cursive; */
 .footer-container a, .footer-container p{
   color: white !important;
   text-decoration: none;
+}
 
+.newsletter-container{
+  width: 85%;
+  margin: 6rem auto;
+  min-height: 55vh;
+  background-image: linear-gradient(to left, rgba(51, 59, 65, 0.671), rgba(34, 32, 32, 0)),
+  url('./assets/newsletter.png');
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding:2rem 4rem;
+}
+
+.newsletter-container h1{
+  font-size: 5rem;
+}
+
+.newsletter-container p{
+  font-size: 1.5rem;
+  text-align: end;
+  font-weight: bold;
 }
 
 @media screen and (max-width:1350px){
@@ -153,6 +216,10 @@ font-family: 'Parisienne', cursive; */
   .chef-card{
     width: 100%;
   }
+
+  .newsletter-container h1{
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width:550px){
@@ -160,7 +227,19 @@ font-family: 'Parisienne', cursive; */
       flex-direction: column;
       justify-content: flex-start;
     }
+    .newsletter-container{
+      padding: 2rem 1rem;
+    }
+
+    .newsletter-container h1{
+      font-size: 1.7rem;
+    }
+
+    .newsletter-container p{
+      font-size: 1rem;
+    }
 }
+
 
 @media screen and (max-width:250px){
     .nav-item{align-items:start;}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import { SocialIcon } from 'react-social-icons';
 
 export default function Footer() {
   return (
@@ -12,22 +13,22 @@ export default function Footer() {
   
           <div>
             <a href='' className='me-4 text-reset'>
-              <MDBIcon fab icon="facebook-f" />
+              <SocialIcon url="https://www.facebook.com/" />
             </a>
             <a href='' className='me-4 text-reset'>
-              <MDBIcon fab icon="twitter" />
+              <SocialIcon url="https://twitter.com/" />
             </a>
             <a href='' className='me-4 text-reset'>
-              <MDBIcon fab icon="google" />
+              <SocialIcon url="https://www.google.com/search?q=" />
             </a>
             <a href='' className='me-4 text-reset'>
-              <MDBIcon fab icon="instagram" />
+               <SocialIcon url="https://www.instagram.com/" />
             </a>
             <a href='' className='me-4 text-reset'>
-              <MDBIcon fab icon="linkedin" />
+               <SocialIcon url="https://www.linkedin.com/" />
             </a>
             <a href='' className='me-4 text-reset'>
-              <MDBIcon fab icon="github" />
+               <SocialIcon url="https://github.com/" />
             </a>
           </div>
         </section>
@@ -38,34 +39,33 @@ export default function Footer() {
               <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
                 <h6 className='text-uppercase fw-bold mb-4 footer-font'>
                   <MDBIcon icon="gem" className="me-3 "/>
-                  Company name
+                   Cuisine Wizard
                 </h6>
                 <p>
-                  Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit.
+                 Discover American culinary culture with recipes, chefs, restaurants, and cooking classes.
                 </p>
               </MDBCol>
   
               <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-                <h6 className='text-uppercase fw-bold mb-4 footer-font'>Products</h6>
+                <h6 className='text-uppercase fw-bold mb-4 footer-font'>Service</h6>
                 <p>
                   <a href='#!' className='text-reset text-light'>
-                    Angular
+                    Catering
                   </a>
                 </p>
                 <p>
                   <a href='#!' className='text-reset text-light'>
-                    React
+                    Dine-in
                   </a>
                 </p>
                 <p>
                   <a href='#!' className='text-reset text-light'>
-                    Vue
+                    Sitemaping
                   </a>
                 </p>
                 <p>
                   <a href='#!' className='text-reset text-light'>
-                    Laravel
+                    Logistics
                   </a>
                 </p>
               </MDBCol>
@@ -79,7 +79,7 @@ export default function Footer() {
                 </p>
                 <p>
                   <a href='#!' className='text-reset text-light'>
-                    Settings
+                    Catalog
                   </a>
                 </p>
                 <p>
@@ -116,8 +116,8 @@ export default function Footer() {
         </section>
   
         <div className='text-center p-4 footer-font' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-          © 2021 Copyright:
-            MDBootstrap.com
+          © 2023 Copyright:
+            Cuisine Wizard
           
         </div>
       </MDBFooter>

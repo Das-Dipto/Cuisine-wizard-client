@@ -12,7 +12,7 @@ const Error = () => {
             <p className=' my-3 text-center'> Apology for serving error dish </p>
             <div className='w-100 d-flex justify-content-center'>
               <Link to={`/`}>
-                <Button variant="outline-success">Back to Homepage</Button>{' '}
+                <Button variant="outline-success">Back to Homepage</Button>
               </Link>
             </div>
           
