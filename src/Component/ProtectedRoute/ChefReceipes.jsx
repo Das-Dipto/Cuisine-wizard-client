@@ -6,6 +6,8 @@ import { TbAwardFilled } from 'react-icons/tb';
 import { AiTwotoneLike} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
 
 const ChefReceipes = () => {
   const {id} = useParams();
@@ -22,16 +24,28 @@ const ChefReceipes = () => {
     })
     .catch(err=> console.log(err))
   },[])
+  const chefdetails =details?.find(item => item.id == id);
+
+  const [receipeDetails, setRecipeDetails] = useState([]);
+  const [receipeBool, setRecipeBool] = useState(false);
+
+  useEffect(()=>{
+    fetch(`http://localhost:5000/receipeInfo`)
+    .then(res=>res.json())
+    .then((data)=>{
+      setRecipeDetails(data);
+      setRecipeBool(true)
+    })
+    .catch(err=> console.log(err))
+  }, [])
 
   
-  const chefdetails =details?.find(item => item.id == id);
-  
+  const chefReceipe = receipeDetails?.find(item=> item.id == id);
+
 
   return (
     <>
-    {/* {
-      bool && <p>{details[0].name}</p>
-    } */}
+ 
     { bool &&
       <div className="details-container mt-5">
          <div className="details-left ">
@@ -48,6 +62,68 @@ const ChefReceipes = () => {
          </div>
       </div>
     }
+
+    <div className="top-receipe receipe-container d-flex flex-column align-items-center mt-5">
+        <h1 className='font-weight-bold'>Top Receipes</h1>
+        { receipeBool &&  
+            <CardGroup className='receipe-card my-5'>
+                  <Card className='border mt-4'>
+                    <Card.Img variant="top" src={chefReceipe.receipeList[0].receipePicture} />
+                    <Card.Body>
+                      <Card.Title>{chefReceipe.receipeList[0].receipeName}</Card.Title>
+                      <Card.Text>
+                        <p><span>Cooking method: </span>
+                        {chefReceipe.receipeList[0].cookingMethod}</p>
+                         <div>
+                            <h5 className='font-weight-bold'>Ingredients:</h5>
+                            {chefReceipe.receipeList[0].ingredients.map((item,ind) => (<li key={ind}>{item}</li>))}
+                         </div>
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                    <Button variant="primary">Favorite</Button>
+                    </Card.Footer>
+                  </Card>
+                  <Card className='border mx-md-5 mt-4'>
+                    <Card.Img variant="top" src={chefReceipe.receipeList[1].receipePicture} />
+                    <Card.Body>
+                      <Card.Title>{chefReceipe.receipeList[1].receipeName}</Card.Title>
+                      <Card.Text>
+                      <p><span>Cooking method: </span>
+                        {chefReceipe.receipeList[1].cookingMethod}</p>
+                         <div>
+                            <h5 className='font-weight-bold'>Ingredients:</h5>
+                            {chefReceipe.receipeList[1].ingredients.map((item,ind) => (<li key={ind}>{item}</li>))}
+                         </div>
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                      <Button variant="primary">Favorite</Button>
+                    </Card.Footer>
+                  </Card>
+                  <Card className='border mt-4'>
+                    <Card.Img variant="top" src={chefReceipe.receipeList[2].receipePicture} />
+                    <Card.Body>
+                      <Card.Title>{chefReceipe.receipeList[2].receipeName}</Card.Title>
+                      <Card.Text>
+                      <p><span>Cooking method: </span>
+                        {chefReceipe.receipeList[2].cookingMethod}</p>
+                         <div>
+                            <h5 className='font-weight-bold'>Ingredients:</h5>
+                            {chefReceipe.receipeList[2].ingredients.map((item,ind) => (<li key={ind}>{item}</li>))}
+                         </div>
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                      <Button variant="primary">Favorite</Button>
+                    </Card.Footer>
+                  </Card>
+                </CardGroup>
+        }
+    </div>
+ 
+
+    
     </>
   )
 }

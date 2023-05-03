@@ -69,6 +69,8 @@ font-family: 'Parisienne', cursive; */
 }
 
 /* Above Login component design */
+
+
 .details-container{
   width: 90%;
   margin:0 auto;
@@ -82,8 +84,18 @@ font-family: 'Parisienne', cursive; */
 
 
 .chef-card{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.receipe-card{
+  width: 90% !important;
+  margin: 0 auto;
+}
+
+.receipe-card span{
+  font-weight: 500;
 }
 
 @media screen and (max-width:900px){
