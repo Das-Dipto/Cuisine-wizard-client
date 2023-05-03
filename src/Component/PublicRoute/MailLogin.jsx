@@ -2,10 +2,15 @@ import React, { useContext, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../ContextProvider/AuthProvider';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const MailLogin = () => {
   const [fieldErrorMessage, setFieldErrorMessage] = useState('');
   const { mailSignIn} = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/chefreceipes/1111'
+
   const handleLogin = (event) =>{
      event.preventDefault();
      const email = event.target.email.value;
@@ -17,6 +22,7 @@ const MailLogin = () => {
            const loggeInUser = result.user;
            console.log(loggeInUser);
            setFieldErrorMessage('');
+           navigate(from, { replace: true })
         })
         .catch((error)=>{
            setFieldErrorMessage('wrong email or password! Try again');

@@ -2,11 +2,15 @@ import React, { useContext, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../ContextProvider/AuthProvider';
-
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 const Register = () => {
     const { user, createUser, updateUserData} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/chefreceipes/1111'
+
     const [passwordError, setPasswordError] = useState('');
     const [inputFieldError, setInputFieldError] = useState('');
     const handleRegisterSubmit = (event) =>{
@@ -30,7 +34,8 @@ const Register = () => {
             .then((result)=>{
                 const registeredUser = result.user;
                 console.log(registeredUser);
-                
+                navigate(from, { replace: true })
+
                 updateUserData(result.user, name, photoURL)
                 .then(()=>{
                     console.log('user name updated');

@@ -14,6 +14,7 @@ import Register from './Component/PublicRoute/Register.jsx';
 import MailLogin from './Component/PublicRoute/MailLogin.jsx';
 import AuthProvider from '../src/Component/ContextProvider/AuthProvider.jsx'
 import ChefReceipes from './Component/ProtectedRoute/ChefReceipes.jsx';
+import PrivateRoute from './Component/ProtectedRoute/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path:'chefreceipes/:id',
-        element:<ChefReceipes></ChefReceipes>
+        element: <PrivateRoute> <ChefReceipes></ChefReceipes> </PrivateRoute> 
       },
     ],
   },

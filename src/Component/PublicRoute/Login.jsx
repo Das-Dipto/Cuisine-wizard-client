@@ -4,17 +4,21 @@ import Lottie from 'lottie-react'
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../ContextProvider/AuthProvider';
 
 const Login = () => {
   const {googleSignIn ,githubSignIn} = useContext(AuthContext)
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/'
 
   const googleLogin = () =>{
       googleSignIn()
       .then((result)=>{
          const loggedInUser =result.user;
          console.log(loggedInUser);
+         navigate(from, { replace: true })
       })
       .catch((error)=>{
         console.log(error.message);
@@ -26,6 +30,7 @@ const Login = () => {
     .then((result)=>{
        const loggedInUser =result.user;
        console.log(loggedInUser);
+       navigate(from, { replace: true })
     })
     .catch((error)=>{
       console.log(error.message);
