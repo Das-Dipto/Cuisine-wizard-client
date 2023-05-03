@@ -20,7 +20,7 @@ const Navber = () => {
   return (
    <div className='nav-container py-3'>
    <div className='nav-item'>
-      <h2 className='text-light logo-text'>Cuisine Wizard</h2>
+      <Link to="/"className='text-decoration-none' ><h2 className='text-light logo-text'>Cuisine Wizard</h2></Link> 
       <div className="links">
           <Link to='/home' className='text-decoration-none text-light mx-4'>Home</Link>
           <Link to='/blog' className='text-decoration-none text-light mx-4'>Blog</Link>

@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ChefReceipes = () => {
   const {id} = useParams();
@@ -39,8 +41,30 @@ const ChefReceipes = () => {
     .catch(err=> console.log(err))
   }, [])
 
-  
   const chefReceipe = receipeDetails?.find(item=> item.id == id);
+
+  const [disableButtonOne, setDisableButtonOne] = useState(false);
+  const [disableButtonTwo, setDisableButtonTwo] = useState(false);
+  const [disableButtonThree, setDisableButtonThree] = useState(false);
+
+  const clickHandlerButtonOne =(param1, param2) =>{
+        notify(param1);
+        setDisableButtonOne(param2);
+  }
+
+  const clickHandlerButtonTwo =(param1, param2) =>{
+    notify(param1);
+    setDisableButtonTwo(param2);
+  }
+
+  const clickHandlerButtonThree =(param1, param2) =>{
+    notify(param1);
+    setDisableButtonThree(param2);
+  }
+
+  const notify = (item) => toast.success(`${item} is my favorite`,{
+    theme: "colored",
+  });
 
 
   return (
@@ -81,7 +105,10 @@ const ChefReceipes = () => {
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                    <Button variant="primary">Favorite</Button>
+                    <Button 
+                    disabled={disableButtonOne} 
+                    onClick={()=> clickHandlerButtonOne(chefReceipe.receipeList[0].receipeName, true)}
+                    variant="primary">Favorite</Button>
                     </Card.Footer>
                   </Card>
                   <Card className='border mx-md-5 mt-4'>
@@ -98,7 +125,10 @@ const ChefReceipes = () => {
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                      <Button variant="primary">Favorite</Button>
+                    <Button 
+                    disabled={disableButtonTwo} 
+                    onClick={()=>clickHandlerButtonTwo(chefReceipe.receipeList[1].receipeName, true)}
+                    variant="primary">Favorite</Button>
                     </Card.Footer>
                   </Card>
                   <Card className='border mt-4'>
@@ -115,15 +145,18 @@ const ChefReceipes = () => {
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                      <Button variant="primary">Favorite</Button>
+                    <Button 
+                    disabled={disableButtonThree} 
+                    onClick={()=>clickHandlerButtonThree(chefReceipe.receipeList[2].receipeName, true)}
+                    variant="primary">Favorite</Button>
                     </Card.Footer>
                   </Card>
                 </CardGroup>
         }
     </div>
  
-
-    
+        
+      <ToastContainer />
     </>
   )
 }
