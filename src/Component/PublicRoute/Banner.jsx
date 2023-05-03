@@ -14,7 +14,7 @@ const Banner = () => {
             alt="First slide"
             />
             <Carousel.Caption className='carousel'>
-            <h3 className='carousel-heading'>First slide label</h3>
+            <h1 className='carousel-heading banner-heading font-weight-bold'>Welcome to <span className='banner-special-text'>Cusine Wizard</span></h1>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -25,7 +25,7 @@ const Banner = () => {
             />
 
             <Carousel.Caption>
-            <h3>Second slide label</h3>
+            <h1 className='banner-heading'>Affiliate with the <span className='banner-special-text'>best cuisine in town</span> </h1>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -36,7 +36,7 @@ const Banner = () => {
             />
 
             <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h1 className='banner-heading'>Explore thousand receipes from <span className='banner-special-text'>East to West Coast</span> </h1>
             </Carousel.Caption>
         </Carousel.Item>
         </Carousel>

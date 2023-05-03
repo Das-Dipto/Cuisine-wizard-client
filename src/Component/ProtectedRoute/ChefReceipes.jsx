@@ -11,9 +11,9 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const ChefReceipes = () => {
   const {id} = useParams();
-
   const [details, setDetails] = useState([]);
   const [bool, setBool] = useState(false);
 
@@ -96,12 +96,13 @@ const ChefReceipes = () => {
                     <Card.Body>
                       <Card.Title>{chefReceipe.receipeList[0].receipeName}</Card.Title>
                       <Card.Text>
-                        <p><span>Cooking method: </span>
-                        {chefReceipe.receipeList[0].cookingMethod}</p>
-                         <div>
-                            <h5 className='font-weight-bold'>Ingredients:</h5>
+                        <span>Cooking method: </span>
+                        {chefReceipe.receipeList[0].cookingMethod}
+                         <>
+                            <h5 className='font-weight-bold mt-2'>Ingredients:</h5>
                             {chefReceipe.receipeList[0].ingredients.map((item,ind) => (<li key={ind}>{item}</li>))}
-                         </div>
+                            <h6 className='mt-2'>Rating: <span className='font-weight-bold'>{chefReceipe.receipeList[0].rating}</span> </h6>
+                         </>
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer>
@@ -116,12 +117,13 @@ const ChefReceipes = () => {
                     <Card.Body>
                       <Card.Title>{chefReceipe.receipeList[1].receipeName}</Card.Title>
                       <Card.Text>
-                      <p><span>Cooking method: </span>
-                        {chefReceipe.receipeList[1].cookingMethod}</p>
-                         <div>
-                            <h5 className='font-weight-bold'>Ingredients:</h5>
+                      <span>Cooking method: </span>
+                        {chefReceipe.receipeList[1].cookingMethod}
+                         <>
+                            <h5 className='font-weight-bold mt-2'>Ingredients:</h5>
                             {chefReceipe.receipeList[1].ingredients.map((item,ind) => (<li key={ind}>{item}</li>))}
-                         </div>
+                            <h6 className='mt-2'>Rating: <span className='font-weight-bold'>{chefReceipe.receipeList[1].rating}</span> </h6>
+                         </>
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer>
@@ -136,12 +138,13 @@ const ChefReceipes = () => {
                     <Card.Body>
                       <Card.Title>{chefReceipe.receipeList[2].receipeName}</Card.Title>
                       <Card.Text>
-                      <p><span>Cooking method: </span>
-                        {chefReceipe.receipeList[2].cookingMethod}</p>
-                         <div>
-                            <h5 className='font-weight-bold'>Ingredients:</h5>
+                        <span>Cooking method: </span>
+                        {chefReceipe.receipeList[2].cookingMethod}
+                         <>
+                            <h5 className='font-weight-bold mt-2'>Ingredients:</h5>
                             {chefReceipe.receipeList[2].ingredients.map((item,ind) => (<li key={ind}>{item}</li>))}
-                         </div>
+                            <h6 className='mt-2'>Rating: <span className='font-weight-bold'>{chefReceipe.receipeList[2].rating}</span> </h6>
+                         </>
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer>

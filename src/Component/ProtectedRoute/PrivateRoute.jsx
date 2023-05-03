@@ -8,7 +8,9 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
 
     if(loading){
-        return <Spinner animation="border" variant="primary" />
+       return <div className='d-flex justify-content-center mt-4 w-100'>
+        <Spinner animation="border" variant="primary" />
+     </div> 
     }
 
     if(!user){

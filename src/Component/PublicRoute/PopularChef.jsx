@@ -4,18 +4,30 @@ import { TbAwardFilled } from 'react-icons/tb';
 import { AiTwotoneLike} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-
+import { Spinner } from 'react-bootstrap';
 
 const PopularChef = () => {
 
   const [chefCard, setChefCard] = useState([]);
+  const [spinnerBool, setSpinnerBool] = useState(true);
 
   useEffect(()=>{
     fetch(`http://localhost:5000/chefinfo`)
     .then(res=>res.json())
-    .then(data=>setChefCard(data))
-    .catch(err=> console.log(err))
+    .then((data)=>{
+      setChefCard(data)
+      setSpinnerBool(false);
+    })
+    .catch(err=> console.log(err))  
   },[])
+
+  if(spinnerBool){
+    return <div className='d-flex justify-content-center mt-4 w-100'>
+        <Spinner animation="border" variant="primary" />
+    </div> 
+  }
+
+
 
   return (
     <>

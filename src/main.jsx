@@ -15,12 +15,14 @@ import MailLogin from './Component/PublicRoute/MailLogin.jsx';
 import AuthProvider from '../src/Component/ContextProvider/AuthProvider.jsx'
 import ChefReceipes from './Component/ProtectedRoute/ChefReceipes.jsx';
 import PrivateRoute from './Component/ProtectedRoute/PrivateRoute.jsx';
+import Error from './Component/PublicRoute/Error.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path:'/',

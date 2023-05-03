@@ -41,6 +41,11 @@ font-family: 'Parisienne', cursive; */
 /* Above Navber component design */
 
 /* Below Home component design */
+
+.banner-special-text{
+  color:aqua;
+}
+
 .banner img{
     object-fit: cover;
     height: 60vh;
@@ -97,6 +102,28 @@ font-family: 'Parisienne', cursive; */
 .receipe-card span{
   font-weight: 500;
 }
+.error-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./assets/404plate.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+
+.error-code{
+  font-size: 5rem;
+  font-family: 'Pacifico', cursive;
+
+}
+
+@media screen and (max-width:1350px){
+  .carousel-caption {
+    top: 25%;
+    transform: translateY(-50%);
+  }
+}
 
 @media screen and (max-width:900px){
   .details-container{
@@ -105,6 +132,10 @@ font-family: 'Parisienne', cursive; */
 
   .details-container img{
      width: 100%;
+  }
+
+  .register-form{
+    width: 75% !important;
   }
 
 } 

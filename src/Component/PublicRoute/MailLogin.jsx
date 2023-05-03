@@ -3,13 +3,20 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../ContextProvider/AuthProvider';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
 
 const MailLogin = () => {
-  const [fieldErrorMessage, setFieldErrorMessage] = useState('');
+  const [fieldErrorMessage, setFieldErrorMessage, loading] = useState('');
   const { mailSignIn} = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || '/chefreceipes/1111'
+
+  if(loading){
+    return <div className='d-flex justify-content-center mt-4 w-100'>
+    <Spinner animation="border" variant="primary" />
+  </div> 
+  }
 
   const handleLogin = (event) =>{
      event.preventDefault();
@@ -29,8 +36,7 @@ const MailLogin = () => {
            console.log(error.message);
         })
        
-    }
-     
+    }   
   }
   return (
     <>

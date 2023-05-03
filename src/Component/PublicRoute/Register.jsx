@@ -3,16 +3,23 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../ContextProvider/AuthProvider';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
 
 
 const Register = () => {
-    const { user, createUser, updateUserData} = useContext(AuthContext);
+    const { loading, createUser, updateUserData} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/chefreceipes/1111'
-
     const [passwordError, setPasswordError] = useState('');
     const [inputFieldError, setInputFieldError] = useState('');
+
+    if(loading){
+        return <div className='d-flex justify-content-center mt-4 w-100'>
+          <Spinner animation="border" variant="primary" />
+      </div> 
+    }
+    
     const handleRegisterSubmit = (event) =>{
         event.preventDefault();
         const name = event.target.name.value;
@@ -56,9 +63,11 @@ const Register = () => {
 
     }
 
+  
+
   return (
     <>
-       <Form onSubmit={handleRegisterSubmit} className='w-25 mx-auto my-5'>
+       <Form onSubmit={handleRegisterSubmit} className='w-25 mx-auto my-5 register-form'>
             <Form.Group className="mb-3" >
                 <Form.Label>Name</Form.Label>
                 <Form.Control type="text" placeholder="Enter Name" name='name' />
