@@ -245,7 +245,7 @@ font-family: 'Pacifico', cursive;
 @media screen and (max-width:1350px){
   .carousel-caption {
     top: 25%;
-    transform: translateY(-40%);
+    transform: translateY(-50%);
   }
 }
 
