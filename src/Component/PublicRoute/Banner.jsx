@@ -25,7 +25,7 @@ const Banner = () => {
             />
 
             <Carousel.Caption>
-            <h1 className='banner-heading'>Affiliate with the <span className='banner-special-text'>best cuisine in town</span> </h1>
+            <h1 className='banner-heading'>Affiliate with the <span className='special-text'>best cuisine in town</span> </h1>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -36,7 +36,7 @@ const Banner = () => {
             />
 
             <Carousel.Caption>
-            <h1 className='banner-heading'>Explore thousand receipes from <span className='banner-special-text'>East to West Coast</span> </h1>
+            <h1 className='banner-heading'>Explore thousand receipes from <span className='special-text'>East to West Coast</span> </h1>
             </Carousel.Caption>
         </Carousel.Item>
         </Carousel>

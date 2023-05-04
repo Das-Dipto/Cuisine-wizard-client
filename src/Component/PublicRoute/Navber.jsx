@@ -24,6 +24,7 @@ const Navber = () => {
       <div className="links">
           <Link to='/home' className='text-decoration-none text-light mx-4'>Home</Link>
           <Link to='/blog' className='text-decoration-none text-light mx-4'>Blog</Link>
+          <Link to='/about' className='text-decoration-none text-light mx-4'>About us</Link>
           {
             user ? <>
               {(user.photoURL) ?  <img title={user.displayName || user.reloadUserInfo.screenName} src={user.photoURL} alt={user.displayName} /> : 

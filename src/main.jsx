@@ -17,6 +17,7 @@ import ChefReceipes from './Component/ProtectedRoute/ChefReceipes.jsx';
 import PrivateRoute from './Component/ProtectedRoute/PrivateRoute.jsx';
 import Error from './Component/PublicRoute/Error.jsx';
 import Blog from './Component/PublicRoute/Blog.jsx';
+import About from './Component/PublicRoute/About.jsx';
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path:'login',
         element:<Login></Login>
+      },
+      {
+        path:'about',
+        element:<About></About>
       },
       {
         path:'register',
