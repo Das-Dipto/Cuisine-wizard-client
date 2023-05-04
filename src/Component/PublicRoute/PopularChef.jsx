@@ -33,7 +33,7 @@ const PopularChef = () => {
     <>
         <div className='chef-container d-flex flex-column align-items-center my-5'>
             <h1 className='font-weight-bold'>Popular Chef</h1>
-            <p className='my-3 w-75 mx-auto'>Featuring the biggest MasterChef of America whom are representing
+            <p className='my-3  text-center px-3'>Featuring the biggest MasterChef of America whom are representing
                 american food receipes among the cuisine popculture around the globe </p>
 
             <div className="chef-card-group d-flex flex-column flex-md-row justify-content-around w-75  flex-wrap mx-auto mt-5">

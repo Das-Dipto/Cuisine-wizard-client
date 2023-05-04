@@ -66,8 +66,8 @@ const Register = () => {
   
 
   return (
-    <>
-       <Form onSubmit={handleRegisterSubmit} className='w-25 mx-auto my-5 register-form'>
+    <div className='registration-form-container py-5'>
+       <Form onSubmit={handleRegisterSubmit} className='w-25 mx-auto my-5 register-form bg-light p-3 common-form'>
             <Form.Group className="mb-3" >
                 <Form.Label>Name</Form.Label>
                 <Form.Control type="text" placeholder="Enter Name" name='name' />
@@ -97,7 +97,7 @@ const Register = () => {
             </Button>
             <h4 className='text-danger'>{inputFieldError}</h4>
     </Form>
-    </>
+    </div>
   )
 }
 

@@ -16,6 +16,7 @@ import AuthProvider from '../src/Component/ContextProvider/AuthProvider.jsx'
 import ChefReceipes from './Component/ProtectedRoute/ChefReceipes.jsx';
 import PrivateRoute from './Component/ProtectedRoute/PrivateRoute.jsx';
 import Error from './Component/PublicRoute/Error.jsx';
+import Blog from './Component/PublicRoute/Blog.jsx';
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path:'signInWithMail',
         element:<MailLogin></MailLogin>
+      },
+      {
+        path:'blog',
+        element: <Blog></Blog>
       },
       {
         path:'chefreceipes/:id',

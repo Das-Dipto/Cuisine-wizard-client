@@ -39,8 +39,8 @@ const MailLogin = () => {
     }   
   }
   return (
-    <>
-        <Form onSubmit={handleLogin} className='w-25 mx-auto my-5'>
+    <div className='login-form-container py-5'>
+        <Form onSubmit={handleLogin} className='w-25 mx-auto bg-white p-3 common-form'>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" name="email" required/>
@@ -56,7 +56,7 @@ const MailLogin = () => {
             </Button>
             <h4 className='text-danger'>{fieldErrorMessage}</h4>
         </Form>
-    </>
+    </div>
   )
 }
 

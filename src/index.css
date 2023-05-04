@@ -3,30 +3,6 @@
 /* font-family: 'Pacifico', cursive;
 font-family: 'Parisienne', cursive; */
 
-/* h1{
-  background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
-  background-size: 400%;
-  font-size: 30px;
-  font-family: sans-serif;
-  letter-spacing: 10px;
-  font-weight: 600;
-  word-spacing: 5px;
-  text-transform: uppercase;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  animation: animate 10s linear infinite;
-}
-
-@keyframes animate{
-  0%{
-      background-position: 0%;
-  }
-
-  100%{
-      background-position: 400%;
-  }
-} */
-
 *{
   margin:0;
   padding:0;
@@ -84,7 +60,7 @@ font-family: 'Parisienne', cursive; */
 
 /* Below Home component design */
 
-.banner-special-text, .newsletter-special-text{
+.special-text{
   color:aqua;
 }
 
@@ -117,7 +93,6 @@ font-family: 'Parisienne', cursive; */
 
 /* Above Login component design */
 
-
 .details-container{
   width: 90%;
   margin:0 auto;
@@ -143,20 +118,93 @@ font-family: 'Parisienne', cursive; */
 .receipe-card span{
   font-weight: 500;
 }
-.error-container{
-    width: 100%;
-    height: 100vh;
-    background-image: url(./assets/404plate.png);
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center;
-    background-size: cover;
+
+.newsletter-container{
+  background-image: linear-gradient(to left, rgba(51, 59, 65, 0.671), rgba(34, 32, 32, 0)),
+  url('./assets/newsletter.png');
 }
 
-.error-code{
-  font-size: 5rem;
-  font-family: 'Pacifico', cursive;
+.bookcuisine-container{
+  background-image: linear-gradient(to right, rgba(51, 59, 65, 0.671), rgba(34, 32, 32, 0)),
+  url('./assets/bookcuisine.jpg');
 }
+
+.common-bg{
+  width: 85%;
+  margin: 6rem auto;
+  min-height: 55vh;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding:2rem 4rem;
+}
+
+.common-heading-text{
+  font-size: 5rem;
+}
+
+.common-paragraph-text{
+  font-size: 1.5rem;
+  text-align: end;
+  font-weight: bold;
+}
+
+.common-form{
+  border-radius: 15px;
+}
+
+.blog-banner{
+  background: url(./assets/Vector-1.png) right top no-repeat, 
+              url(./assets/Vector.png) left bottom no-repeat ;
+  width: 100%;
+  min-height: 10vh;
+}
+
+.q-and-a{
+  border-radius: 15px;
+}
+
+.blog-container, .registration-form-container, .login-form-container{
+  width: 100%;
+  animation: animation-one 30s linear 0s infinite;
+}
+
+@keyframes animation-one{
+0%{
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
+14%{
+  background-image: linear-gradient(to right, #8360c3, #2ebf91);
+}
+
+28%{
+  background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+}
+
+42%{
+
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+56%{
+  background-image: linear-gradient(to right, #00b09b, #96c93d);
+}
+
+70%{
+  background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
+}
+
+84%{
+  background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+}
+
+100%{
+  background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+}
+}
+
 
 .footer-font{
   color: #FF6000;
@@ -167,28 +215,22 @@ font-family: 'Parisienne', cursive; */
   text-decoration: none;
 }
 
-.newsletter-container{
-  width: 85%;
-  margin: 6rem auto;
-  min-height: 55vh;
-  background-image: linear-gradient(to left, rgba(51, 59, 65, 0.671), rgba(34, 32, 32, 0)),
-  url('./assets/newsletter.png');
-  background-position: center;
-  background-attachment: scroll;
+.error-container{
+  width: 100%;
+  height: 100vh;
+  background-image: url(./assets/404plate.png);
   background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
   background-size: cover;
-  padding:2rem 4rem;
 }
 
-.newsletter-container h1{
-  font-size: 5rem;
+.error-code{
+font-size: 5rem;
+font-family: 'Pacifico', cursive;
 }
 
-.newsletter-container p{
-  font-size: 1.5rem;
-  text-align: end;
-  font-weight: bold;
-}
+
 
 @media screen and (max-width:1350px){
   .carousel-caption {
@@ -217,7 +259,7 @@ font-family: 'Parisienne', cursive; */
     width: 100%;
   }
 
-  .newsletter-container h1{
+  .common-heading-text{
     font-size: 3rem;
   }
 }
@@ -231,11 +273,11 @@ font-family: 'Parisienne', cursive; */
       padding: 2rem 1rem;
     }
 
-    .newsletter-container h1{
+    .common-heading-text{
       font-size: 1.7rem;
     }
 
-    .newsletter-container p{
+    .common-paragraph-text{
       font-size: 1rem;
     }
 }

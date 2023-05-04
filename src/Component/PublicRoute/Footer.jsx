@@ -12,22 +12,22 @@ export default function Footer() {
           </div>
   
           <div>
-            <a href='' className='me-4 text-reset'>
+            <a href='#' className='me-4 text-reset'>
               <SocialIcon url="https://www.facebook.com/" />
             </a>
-            <a href='' className='me-4 text-reset'>
+            <a href='#' className='me-4 text-reset'>
               <SocialIcon url="https://twitter.com/" />
             </a>
-            <a href='' className='me-4 text-reset'>
+            <a href='#' className='me-4 text-reset'>
               <SocialIcon url="https://www.google.com/search?q=" />
             </a>
-            <a href='' className='me-4 text-reset'>
+            <a href='#' className='me-4 text-reset'>
                <SocialIcon url="https://www.instagram.com/" />
             </a>
-            <a href='' className='me-4 text-reset'>
+            <a href='#' className='me-4 text-reset'>
                <SocialIcon url="https://www.linkedin.com/" />
             </a>
-            <a href='' className='me-4 text-reset'>
+            <a href='#' className='me-4 text-reset'>
                <SocialIcon url="https://github.com/" />
             </a>
           </div>
@@ -49,22 +49,22 @@ export default function Footer() {
               <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
                 <h6 className='text-uppercase fw-bold mb-4 footer-font'>Service</h6>
                 <p>
-                  <a href='#!' className='text-reset text-light'>
+                  <a href='#' className='text-reset text-light'>
                     Catering
                   </a>
                 </p>
                 <p>
-                  <a href='#!' className='text-reset text-light'>
+                  <a href='#' className='text-reset text-light'>
                     Dine-in
                   </a>
                 </p>
                 <p>
-                  <a href='#!' className='text-reset text-light'>
+                  <a href='#' className='text-reset text-light'>
                     Sitemaping
                   </a>
                 </p>
                 <p>
-                  <a href='#!' className='text-reset text-light'>
+                  <a href='#' className='text-reset text-light'>
                     Logistics
                   </a>
                 </p>
@@ -73,22 +73,22 @@ export default function Footer() {
               <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4 '>
                 <h6 className='text-uppercase fw-bold mb-4 footer-font'>Useful links</h6>
                 <p>
-                  <a href='#!' className='text-reset text-light'>
+                  <a href='#' className='text-reset text-light'>
                     Pricing
                   </a>
                 </p>
                 <p>
-                  <a href='#!' className='text-reset text-light'>
+                  <a href='#' className='text-reset text-light'>
                     Catalog
                   </a>
                 </p>
                 <p>
-                  <a href='#!' className='text-reset text-light'>
+                  <a href='#' className='text-reset text-light'>
                     Orders
                   </a>
                 </p>
                 <p>
-                  <a href='#!' className='text-reset text-light'>
+                  <a href='#' className='text-reset text-light'>
                     Help
                   </a>
                 </p>
