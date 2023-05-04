@@ -1,30 +1,22 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
-import html2canvas from "html2canvas";
-import { jsPDF } from "jspdf";
+import Pdf from "react-to-pdf";
 
+const ref = React.createRef();
 const Blog = () => {
-    const downloadPdfDocument = () => {
-        const input = document.getElementById('blog-content');
-        html2canvas(input)
-            .then((canvas) => {
-                const imgData = canvas.toDataURL('image/png');
-                const pdf = new jsPDF();
-                pdf.addImage(imgData, 'JPEG', 0, 0);
-                pdf.save(`$download.pdf`);
-            })
-    }
-
+   
   return (
     <>
         <div className="blog-banner">
             <div className="blog-banner-content w-75 mx-auto d-flex flex-wrap justify-content-between py-3">
                 <h1>Blog</h1>
-                <Button onClick={downloadPdfDocument} className='bg-primary'>Download</Button>
+                <Pdf targetRef={ref} filename="blog.pdf">
+                    {({ toPdf }) => <Button onClick={toPdf} className='bg-primary'>Download</Button>}
+                </Pdf>
             </div>
         </div>
 
-        <div id="blog-content" className="blog-container py-5">
+        <div id="blog-content" className="blog-container py-5" ref={ref}>
             <div className="question-one   q-and-a w-75 mx-auto py-3 px-5 my-4 bg-light">
                 <h3 className='font-weight-bold'>i.Tell us the differences between uncontrolled and controlled components.</h3>
                 <p>Ans: The DOM controls uncontrolled components, while React controls regulated components. Although controlled components require more code, they provide more flexibility and control. You must store a controlled component's state in a React component and update it with event handlers in order to use it. Although they are simpler to use, uncontrolled components provide less control. Uncontrolled components can be used by simply adding an event handler to them and letting the DOM regulate their state. When you need more control, use controlled components; when you require simplicity, use uncontrolled components.</p>

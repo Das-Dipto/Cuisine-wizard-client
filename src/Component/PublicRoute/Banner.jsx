@@ -15,7 +15,7 @@ const Banner = () => {
             alt="First slide"
             />
             <Carousel.Caption className='carousel'>
-            <h1 className='carousel-heading banner-heading font-weight-bold'>Welcome to <span className='special-text'>Cusine Wizard</span></h1>
+            <h1 className='carousel-heading banner-heading font-weight-bold'>Welcome to <span className='special-text'>Cuisine Wizard</span></h1>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>

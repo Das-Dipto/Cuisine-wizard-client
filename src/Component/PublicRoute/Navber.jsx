@@ -29,20 +29,21 @@ const Navber = () => {
    <div className='nav-item'>
       <Link to="/home"className='text-decoration-none' ><h2 className='text-light logo-text'>Cuisine Wizard</h2></Link> 
       <div className="links">
-          <NavLink style={navLinkStyles} to='/home' className='text-decoration-none  mx-4'>Home</NavLink>
-          <NavLink style={navLinkStyles} to='/blog' className='text-decoration-none  mx-4'>Blog</NavLink>
-          <NavLink style={navLinkStyles} to='/about' className='text-decoration-none  mx-4'>About us</NavLink>
+          <NavLink style={navLinkStyles} to='/home' className='text-decoration-none mt-2 mt-md-0  mx-4'>Home</NavLink>
+          <NavLink style={navLinkStyles} to='/blog' className='text-decoration-none mt-2 mt-md-0   mx-4'>Blog</NavLink>
+          <NavLink style={navLinkStyles} to='/about' className='text-decoration-none mt-2 mt-md-0   mx-4'>About</NavLink>
           {
             user ? <>
-              {(user.photoURL) ?  <img title={user.displayName || user.reloadUserInfo.screenName} src={user.photoURL} alt={user.displayName} /> : 
-                          <small title={user.displayName} className='text-light text-decoration-none'>{user.email}</small>}
+              {(user.photoURL) ?  
+              <img className='mt-2 mt-md-0 ms-3 ms-md-0' title={user.displayName || user.reloadUserInfo.screenName} src={user.photoURL} alt={user.displayName} /> : 
+              ''}
             <Link to=''>  
-                  <Button onClick={signingOut} variant="outline-info" className='ms-4'>Logout</Button>
+                  <Button onClick={signingOut} variant="outline-info" className='mt-2 mt-md-0 ms-4'>Logout</Button>
               </Link>
               </>
              : 
              <Link to='/login'>
-                  <Button variant="outline-info" className='ms-4'>Login</Button>
+                  <Button variant="outline-info" className='mt-2 mt-md-0 ms-md-4'>Login</Button>
              </Link>
           }
          

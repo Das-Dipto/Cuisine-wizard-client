@@ -67,7 +67,7 @@ const Register = () => {
 
   return (
     <div className='registration-form-container py-5'>
-       <Form onSubmit={handleRegisterSubmit} className='w-25 mx-auto my-5 register-form bg-light p-3 common-form'>
+       <Form style={{ minWidth: '250px', maxWidth:'400px' }}onSubmit={handleRegisterSubmit} className=' mx-auto my-5 register-form bg-light p-3 common-form'>
             <Form.Group className="mb-3" >
                 <Form.Label>Name</Form.Label>
                 <Form.Control type="text" placeholder="Enter Name" name='name' />
@@ -93,7 +93,7 @@ const Register = () => {
             </Form.Group>
             
             <Button variant="primary" type="submit">
-                Submit
+                Register
             </Button>
             <h4 className='text-danger'>{inputFieldError}</h4>
     </Form>

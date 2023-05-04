@@ -49,7 +49,7 @@ const PopularChef = () => {
                               src={item.picture}
                               placeholderSrc={item.picture}
                          /> */}
-                         <h3>{item.name}</h3>
+                         <h3 className='mt-2'>{item.name}</h3>
                          <h6><GrUserExpert className='me-2' style={{fontSize:20}} />{item.experience} years of experience</h6>
                          <span className='d-flex flex-wrap justify-content-between'>
                             <p className='d-flex align-items-center'><TbAwardFilled className='me-2' style={{fontSize:15}} />Number of receipe: {item.receipes}</p>

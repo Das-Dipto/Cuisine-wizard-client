@@ -53,8 +53,10 @@ font-family: 'Parisienne', cursive; */
 }
 
 .nav-container img{
-    width: 10% !important;
-    height: 4%;
+    width: 50px !important;
+    height: 40px !important;
+    border: 1px solid #ff7b00;
+    border-radius: 50%;
 }
 /* Above Navber component design */
 
@@ -230,6 +232,14 @@ font-size: 5rem;
 font-family: 'Pacifico', cursive;
 }
 
+.login-bar{
+  cursor: pointer;
+}
+
+.receipe-image{
+  height: 200px;
+}
+
 
 
 @media screen and (max-width:1350px){
@@ -247,11 +257,6 @@ font-family: 'Pacifico', cursive;
   .details-container img{
      width: 100%;
   }
-
-  .register-form{
-    width: 75% !important;
-  }
-
 } 
 
 @media screen and (max-width:750px){
@@ -283,13 +288,14 @@ font-family: 'Pacifico', cursive;
 }
 
 
-@media screen and (max-width:250px){
+@media screen and (max-width:300px){
     .nav-item{align-items:start;}
     
     .links{
        display: flex;
        flex-direction: column;
     }
+
 }
 
 

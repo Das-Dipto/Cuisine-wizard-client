@@ -83,7 +83,7 @@ const ChefReceipes = () => {
           />
          </div>
          <div className="details-right">
-             <h3>{chefdetails.name}</h3>
+             <h3 className='mt-3 mt-md-1'>{chefdetails.name}</h3>
              <p className=''>{chefdetails.description}</p>
              <h6><GrUserExpert className='me-2' style={{fontSize:20}} />{chefdetails.experience} years of experience</h6>
             
@@ -99,7 +99,7 @@ const ChefReceipes = () => {
         { receipeBool &&  
             <CardGroup className='receipe-card my-5'>
                   <Card className='border mt-4'>
-                    <Card.Img variant="top" src={chefReceipe.receipeList[0].receipePicture} />
+                    <Card.Img variant="top" className='receipe-image'  src={chefReceipe.receipeList[0].receipePicture} />
                     <Card.Body>
                       <Card.Title>{chefReceipe.receipeList[0].receipeName}</Card.Title>
                       <Card.Text>
@@ -120,7 +120,7 @@ const ChefReceipes = () => {
                     </Card.Footer>
                   </Card>
                   <Card className='border mx-md-5 mt-4'>
-                    <Card.Img variant="top" src={chefReceipe.receipeList[1].receipePicture} />
+                    <Card.Img variant="top" className='receipe-image' src={chefReceipe.receipeList[1].receipePicture} />
                     <Card.Body>
                       <Card.Title>{chefReceipe.receipeList[1].receipeName}</Card.Title>
                       <Card.Text>
@@ -141,7 +141,7 @@ const ChefReceipes = () => {
                     </Card.Footer>
                   </Card>
                   <Card className='border mt-4'>
-                    <Card.Img variant="top" src={chefReceipe.receipeList[2].receipePicture} />
+                    <Card.Img variant="top" className='receipe-image' src={chefReceipe.receipeList[2].receipePicture} />
                     <Card.Body>
                       <Card.Title>{chefReceipe.receipeList[2].receipeName}</Card.Title>
                       <Card.Text>

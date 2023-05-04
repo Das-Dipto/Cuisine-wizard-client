@@ -32,7 +32,7 @@ const MailLogin = () => {
            navigate(from, { replace: true })
         })
         .catch((error)=>{
-           setFieldErrorMessage('wrong email or password! Try again');
+           setFieldErrorMessage('!!! Wrong email or password. Try again');
            console.log(error.message);
         })
        
@@ -40,7 +40,7 @@ const MailLogin = () => {
   }
   return (
     <div className='login-form-container py-5'>
-        <Form onSubmit={handleLogin} className='w-25 mx-auto bg-white p-3 common-form'>
+        <Form style={{ minWidth: '250px', maxWidth:'400px'}} onSubmit={handleLogin} className='mx-auto bg-white p-3 common-form'>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" name="email" required/>
@@ -52,9 +52,9 @@ const MailLogin = () => {
             </Form.Group>
         
             <Button variant="primary" type="submit">
-                Submit
+                Login
             </Button>
-            <h4 className='text-danger'>{fieldErrorMessage}</h4>
+            <h6 className='text-danger mt-2'>{fieldErrorMessage}</h6>
         </Form>
     </div>
   )
