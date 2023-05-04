@@ -16,4 +16,4 @@
 - Currently users are able to register in this web application and include preferable receipes by their favorite chef by
   a single click.They can sign into newsletter for getting information about latest cooking techniques.Eventually, they are able to schedule their time at their desired chef's restaurant.
 
-* Website link: [Cuisine Wizard](https://meet.google.com/cma-capd-sff?pli=1)
+* Website link: [Cuisine Wizard](https://cuisine-wizard.web.app/)
