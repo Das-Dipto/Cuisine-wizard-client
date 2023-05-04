@@ -3,9 +3,7 @@ import Button from 'react-bootstrap/Button';
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 
-
 const Blog = () => {
-
     const downloadPdfDocument = () => {
         const input = document.getElementById('blog-content');
         html2canvas(input)

@@ -5,6 +5,7 @@ import { AiTwotoneLike} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { Spinner } from 'react-bootstrap';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const PopularChef = () => {
 
@@ -41,6 +42,13 @@ const PopularChef = () => {
                 chefCard?.map((item)=>(
                     <div key={item.id} className='chef-card p-3 my-3'>
                          <img className='w-100 object-cover' src={item.picture} alt={item.name} />
+                         {/* <LazyLoadImage
+                              height={300}
+                              className='w-100 object-cover'
+                              effect="blur"
+                              src={item.picture}
+                              placeholderSrc={item.picture}
+                         /> */}
                          <h3>{item.name}</h3>
                          <h6><GrUserExpert className='me-2' style={{fontSize:20}} />{item.experience} years of experience</h6>
                          <span className='d-flex flex-wrap justify-content-between'>

@@ -1,9 +1,16 @@
 import React, { useContext } from 'react'
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../ContextProvider/AuthProvider';
 
 const Navber = () => {
+    //Used for active route styling
+    const navLinkStyles = ({isActive}) => {
+      return{
+         color: isActive ? '#FFA500' : '#fff'
+      }
+    }
+
   const {user, logOut} = useContext(AuthContext);
 
   const signingOut = () =>{
@@ -20,11 +27,11 @@ const Navber = () => {
   return (
    <div className='nav-container py-3'>
    <div className='nav-item'>
-      <Link to="/"className='text-decoration-none' ><h2 className='text-light logo-text'>Cuisine Wizard</h2></Link> 
+      <Link to="/home"className='text-decoration-none' ><h2 className='text-light logo-text'>Cuisine Wizard</h2></Link> 
       <div className="links">
-          <Link to='/home' className='text-decoration-none text-light mx-4'>Home</Link>
-          <Link to='/blog' className='text-decoration-none text-light mx-4'>Blog</Link>
-          <Link to='/about' className='text-decoration-none text-light mx-4'>About us</Link>
+          <NavLink style={navLinkStyles} to='/home' className='text-decoration-none  mx-4'>Home</NavLink>
+          <NavLink style={navLinkStyles} to='/blog' className='text-decoration-none  mx-4'>Blog</NavLink>
+          <NavLink style={navLinkStyles} to='/about' className='text-decoration-none  mx-4'>About us</NavLink>
           {
             user ? <>
               {(user.photoURL) ?  <img title={user.displayName || user.reloadUserInfo.screenName} src={user.photoURL} alt={user.displayName} /> : 

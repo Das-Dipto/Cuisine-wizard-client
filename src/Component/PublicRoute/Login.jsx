@@ -12,7 +12,7 @@ const Login = () => {
   const {googleSignIn ,githubSignIn, loading} = useContext(AuthContext)
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || '/'
+  const from = location.state?.from?.pathname || '/chefreceipes/1111'
 
   if(loading){
     return <div className='d-flex justify-content-center mt-4 w-100'>
