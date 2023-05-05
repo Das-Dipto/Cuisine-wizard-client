@@ -10,6 +10,9 @@
   various components based on different condition and routes. Users are able to navigate from one page
   to another without loading the page for getting information about American cuisine.
 
+- This project formally includes- PAGE-> Home, Login, Maillogin, Register, Error, Blog, About,
+  Root, ChefReceipe. COMPONENT-> Banner, BookCuisine, Newsletter, PopularChef, Navber, AuthProvider.
+
 - The page currenty serving information about the cuisine, chef and their top receipes of USA. Within a few weeks
   it will provide wide range of information regarding food culture and economy of United States of America(East Coast to West Coast)
 

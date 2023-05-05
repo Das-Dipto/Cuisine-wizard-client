@@ -3,6 +3,7 @@
 /* font-family: 'Pacifico', cursive;
 font-family: 'Parisienne', cursive; */
 
+/* Universal design */
 *{
   margin:0;
   padding:0;
@@ -58,10 +59,9 @@ font-family: 'Parisienne', cursive; */
     border: 1px solid #ff7b00;
     border-radius: 50%;
 }
-/* Above Navber component design */
 
-/* Below Home component design */
 
+/* Below Home page design */
 .special-text{
   color:aqua;
 }
@@ -76,15 +76,13 @@ font-family: 'Parisienne', cursive; */
   transform: translateY(-50%);
 }
 
-/* Above Home component design */
-
-
-/* Below Login component design */
+/* Below Login page design */
 .login-bar{
   border: 1px solid black;
   font-size:1.3rem;
   font-weight: bold;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .login-bar:hover{
@@ -93,8 +91,7 @@ font-family: 'Parisienne', cursive; */
   background-color: rgb(8, 164, 255);
 }
 
-/* Above Login component design */
-
+/* Below ChefRecipe page design */
 .details-container{
   width: 90%;
   margin:0 auto;
@@ -102,14 +99,9 @@ font-family: 'Parisienne', cursive; */
   justify-content: space-between;
 }
 
+
 .details-container img{
   max-width: 580px;
-}
-
-.chef-card{
-  /* border: 1px solid red; */
-  width: 40%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
 .receipe-card{
@@ -121,16 +113,31 @@ font-family: 'Parisienne', cursive; */
   font-weight: 500;
 }
 
+.receipe-image{
+  height: 200px;
+}
+
+
+/* Below PopularChef component design */
+.chef-card{
+  width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+/* Below Newsletter component design */
 .newsletter-container{
   background-image: linear-gradient(to left, rgba(51, 59, 65, 0.671), rgba(34, 32, 32, 0)),
   url('./assets/newsletter.png');
 }
 
+/* Below BookCuisine component design */
 .bookcuisine-container{
   background-image: linear-gradient(to right, rgba(51, 59, 65, 0.671), rgba(34, 32, 32, 0)),
   url('./assets/bookcuisine.jpg');
 }
 
+
+/* Below Common background for bookcuisine and newsletter component */
 .common-bg{
   width: 85%;
   margin: 6rem auto;
@@ -142,20 +149,24 @@ font-family: 'Parisienne', cursive; */
   padding:2rem 4rem;
 }
 
+/* Below Common heading for bookcuisine and newsletter component */
 .common-heading-text{
   font-size: 5rem;
 }
 
+/* Below Common paragraph for bookcuisine and newsletter component */
 .common-paragraph-text{
   font-size: 1.5rem;
   text-align: end;
   font-weight: bold;
 }
 
+/* Below Common form for MailLogin and Register page */
 .common-form{
   border-radius: 15px;
 }
 
+/* Below Blog page design */
 .blog-banner{
   background: url(./assets/Vector-1.png) right top no-repeat, 
               url(./assets/Vector.png) left bottom no-repeat ;
@@ -167,6 +178,7 @@ font-family: 'Parisienne', cursive; */
   border-radius: 15px;
 }
 
+/* Below common animation used as background for Blog, Registration, Login page */
 .blog-container, .registration-form-container, .login-form-container{
   width: 100%;
   animation: animation-one 30s linear 0s infinite;
@@ -207,7 +219,7 @@ font-family: 'Parisienne', cursive; */
 }
 }
 
-
+/* Below Footer component design */
 .footer-font{
   color: #FF6000;
 }
@@ -217,6 +229,7 @@ font-family: 'Parisienne', cursive; */
   text-decoration: none;
 }
 
+/* Below error page design */
 .error-container{
   width: 100%;
   height: 100vh;
@@ -232,16 +245,8 @@ font-size: 5rem;
 font-family: 'Pacifico', cursive;
 }
 
-.login-bar{
-  cursor: pointer;
-}
 
-.receipe-image{
-  height: 200px;
-}
-
-
-
+/* Responsive media query started */
 @media screen and (max-width:1350px){
   .carousel-caption {
     top: 25%;

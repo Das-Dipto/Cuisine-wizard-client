@@ -10,7 +10,7 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import LazyLoad from 'react-lazyload';
 
 
 const ChefReceipes = () => {
@@ -74,13 +74,10 @@ const ChefReceipes = () => {
     { bool &&
       <div className="details-container mt-5">
          <div className="details-left ">
-          <LazyLoadImage
-             height={300}
-             effect="blur"
-             className='mb-4 me-4'
-             src={chefdetails.picture}
-             placeholderSrc={chefdetails.picture}
-          />
+           {/* Lazy loading react component used in below image of chef */}
+              <LazyLoad height={300} width={200} threshold={0.95}>
+                <img className='mb-4 me-4' src={chefdetails.picture} />
+              </LazyLoad>
          </div>
          <div className="details-right">
              <h3 className='mt-3 mt-md-1'>{chefdetails.name}</h3>

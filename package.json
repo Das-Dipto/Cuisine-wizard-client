@@ -25,6 +25,7 @@
     "react-html2pdf": "^1.0.1",
     "react-icons": "^4.8.0",
     "react-lazy-load-image-component": "^1.5.6",
+    "react-lazyload": "^3.2.0",
     "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.11.0",
     "react-social-icons": "^5.15.0",
